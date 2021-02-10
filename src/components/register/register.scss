@@ -1,29 +1,20 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-}
+// 
 .logo{
     width: 130px;
     position: relative;
     right: 290px;
     top: 20px;
 }
-// .main{
-//     width: 50%;
-//     height: 100%;
-// }
 .img{
     position: relative;
     right: 00px;
-    // bottom: -50px;
     display: inline;
 }
 
 .Main{
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid #d5d2d2;
     border-radius: 10px;

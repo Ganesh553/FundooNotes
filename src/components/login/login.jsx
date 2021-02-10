@@ -1,64 +1,96 @@
 import React from "react";
-import { Form, Button, Input, FormGroup, FormControl, ControlLabel} from "react-bootstrap";
+import Form from "react-bootstrap/Form";
+import Button from 'react-bootstrap/Button';
+import TextField from '@material-ui/core/TextField';
+import Typography from "@material-ui/core/Typography";
+import{ Link} from "react-router-dom";
 import './login.scss'
 import UserService from "../../service/userService";
 const user = new UserService();
 
 
-class Register extends React.Component{
+class Login extends React.Component{
 
         constructor(props){
             super(props)
             this.state = {
                 mail:'',
-                password:''
+                password:'',
             }
         }
         handleChange=(e)=>{
             console.log("on change calling", e.target.value)
             this.setState({ [e.target.name]: e.target.value })
         }
-        handleRegister = (e) =>{
-            console.log("calling handle")
+        handleLogin = (e) =>{
+            console.log("calling handle Login")
             let data = {
-                mail:this.state.mail,
+                email:this.state.mail,
                 password:this.state.password
             }
             console.log(data)
-            user.registration(data).then((response) =>{
+            user.login(data).then((response) =>{
                 console.log(" Response is successfull", response);
             }).catch((error)=>{
                 console.log("error", error);
             })
-        }
+         }
     
-
-    render(){
-        return(<div>
-                <div class="main">
-                    <Form className="App">
-                        <h2>
-                        <mark class="F">F</mark>
-                        <mark class="u">u</mark>
-                        <mark class="n">n</mark>
-                        <mark class="d">d</mark>
-                        <mark class="o1">o</mark>
-                        <mark class="o">o</mark>
-                        </h2>
-                        <h1>Sign in</h1>
-                        <h5>Use your Google Account</h5>
-                        <input class="email" type="email" name="mail" placeholder="Email or phone" required />
-                        <h4 class="forgot">Forgot email?</h4>
-                        <input class="email1" type="password" name="password" placeholder="Password" required />
-                        <h4 class="forgot1">Forgot password?</h4>
-                        <p>Not your computer? Use Guest mode to sign in privately.</p>
-                        <h4 class="learn">Learn more</h4>
-                        <h4 class="create">Create account</h4>
-                        <input class="but" type="submit" onClick={this.handleRegister} value="Next"></input>
-                    </Form>
-                </div>
-            </div>)   
-    }
-}
-export default Register
-// <Button class="But" onClick={this.handleRegister} >Next</Button>
+        render() {
+          return (
+              <div>
+                  <div className="container-body1">
+                      <div className="box1"><Typography className="app_name" variant="h5" color="textSecondary">
+                        <span style={{ color: "#0606f8" }}>F</span>
+                        <span style={{ color: "#d10303" }}>u</span>
+                        <span style={{ color: "#f0b000" }}>n</span>
+                        <span style={{ color: "#0606f8" }}>d</span>
+                        <span style={{ color: "green" }}>o</span>
+                        <span style={{ color: "#d10303" }}>o</span>
+                      </Typography></div>
+                      <div className="sign"><h4>Sign in</h4></div>
+                      <div className="abc"><h6>Use your Google Account</h6></div>
+                      <div className="form">
+            
+                          <Form.Group controlId="formBasicEmail">
+                              <TextField
+                                  id="outlined-textarea"
+                                  name="mail"
+                                  type="mail"
+                                  label="Email"
+                                  placeholder=""
+                                  multiline
+                                  variant="outlined"
+                                  color="blue"
+                                  onChange={this.handleChange}
+                                  value={this.state.mail}
+                              />
+                              <Form.Text className="text-muted">
+                              </Form.Text>
+                          </Form.Group>
+                          <Form.Group controlId="formBasicPassword">
+                              <TextField
+                                  id="outlined-textarea"
+                                  label="Password"
+                                  placeholder=""
+                                  name="password"
+                                  variant="outlined"
+                                  type="password"
+                                  autoComplete="current-password"
+                                  onChange={this.handleChange}
+                                  value={this.state.password}
+                              />
+                          </Form.Group>
+                          <Link className="forgetPas" variant="link" to={"/password"}>Forgot password?</Link>
+                          <Form.Group controlId="formBasicCheckbox">
+                          </Form.Group>
+                          <Button className="but3" variant="primary" onClick={this.handleLogin}>
+                              Next
+                          </Button>
+                      </div>
+                  </div>
+              </div>
+          )
+      }
+  }     
+export default Login

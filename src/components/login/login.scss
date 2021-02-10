@@ -1,106 +1,61 @@
-.App{
+@import url(https://fonts.googleapis.com/css?family=Google+Sans);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap);
+.container-body1{
+    padding: 0px;
+    margin: 0px;
+    width: 450px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    border: 1px solid  rgba($color: #eeeeee50, $alpha: 1.0);
+    border-width: 2px;
+    margin-top: 11.39%;
+    font-family: 'Google Sans',serif;
+}
+.app_name {
+    width: 73px;
+    position: relative;
+    top: 50px;
+    left: 180px;
+}
+.but3{
+    background-color: #4971f6;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    width: 81px;
+    height: 37px;
+    position: relative;
+    top: 40px;
+    left: 150px;
+}
+.forgetPas{
+    background-color: #4971f6;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    height: 38px;
+    width: 110px;
     position: absolute;
-    top: 50%;
-    left: 40%;
-    width: 420px;  
- height: 520px; 
+    top: 150px;
+    left: 40px;
 }
-h2{
-    color: red;
+#outlined-textarea{
+    width: 333px;
+    outline: none;
 }
-mark.F {
-    color:blue;
-    background: none;
-}
-mark.u {
-    color:red;
-    background: none;
-}
-mark.n {
-    color:yellow;
-    background: none;
-}
-mark.d {
-    color:#0000A0;
-    background: none;
-}
-mark.o1 {
-    color:green;
-    background: none;
-}
-mark.o {
-    color:red;
-    background: none;
-}
-.forgot{
-    color:  #4285F4;
+.sign{
     position: relative;
-    right: 28%;
-    bottom: 3%;
+    top: 75px;
 }
-.forgot1{
-    color: #4285F4;
+.abc{
     position: relative;
-    right: 26%;
-    bottom: 3%;
+    top: 78px;
+    font-family: 'Noto Sans JP', sans-serif;    
 }
-.email{
-    width: 320px;
-    height: 50px;
-    transition: 
-    top 0.3s ease,
-    font-size 0.3ease,
-    color 0.3ease;
+.form{
+    margin-top: 20%;
 }
-.email1{
-    width: 320px;
-    height: 50px;
-    transition: 
-    top 0.3s ease,
-    font-size 0.3ease,
-    color 0.3ease;
-}
-
-.App input:focus + .email{
-    top: 10px;
-    font-size: 10px;
-    color: #222;
-}
-.but{
-    position: absolute;
-    top: 85%;
-    left: 67%;
-    height: 40px;
-    width: 19%;
-    color:white;
-    background-color: #4285F4;
-    font-family: Roboto font;
-    font-size: round($number: 10);
-    text-align: center;
-}
-p{
-    margin-top: 25px;
-    position: relative;
-    top: -4%;
-    left: 6%;
-}
-h4{
-    color: #4285F4;
-}
-.learn{
-    position: relative;
-    top: -5%;
-    left: -30%;
-}
-.create{
-    position: relative;
-    color: #4285F4;
-    top: -06%;
-    left: -28%;
-}
-// .password{
-//     position: absolute;
-//     left: 10%;
-//     height: 50px;
-//     width: 320px;
+// @media only screen and (max-width: 900px) {
 // }

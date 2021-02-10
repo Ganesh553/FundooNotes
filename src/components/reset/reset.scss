@@ -1,4 +1,4 @@
-.container-body2{
+.container-body3{
     padding: 0px;
     margin: 0px;
     width: 450px;
@@ -11,7 +11,7 @@
     margin-top: 11.39%;
     font-family: 'Google Sans',serif;
 }
-.but{
+.but1{
     width: 250px;
     height: 46px;
     background-color: #4971f6;
@@ -19,24 +19,16 @@
     border-radius: 8px;
     border: none;
     position: relative;
-    top: 45px;
-    right: 1%;
+    top: 60px;
+    left: 10px;
 } 
-.sign{
+.sign1{
     position: relative;
     top: 65px;
 }
-.abc{
+.form1{
     position: relative;
-    top: 70px;
-}
-.form{
-    // margin-top: 20%;
-    position: relative;
-    top: 16px;
+    top: 110px;
 }
 @media only screen and (max-width: 900px) {
-    .container-body2{
-
-    }
 }

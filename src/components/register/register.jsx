@@ -5,7 +5,7 @@ import logo1 from '../../assert/download.jpg';
 import UserService from "../../service/userService";
 const user = new UserService();
 
-class Login extends React.Component{
+class Register extends React.Component{
     constructor(props){
         super(props)
         this.state = {
@@ -29,7 +29,7 @@ class Login extends React.Component{
             email: this.state.email,
             password: this.state.password,
             service:"advance"
-        }
+        };
         console.log(data)
         user.registration(data).then((response) =>{
             console.log(" Response is successfull", response);
@@ -82,4 +82,4 @@ class Login extends React.Component{
              </div> )
     }
 }
-export default Login
+// export default Register

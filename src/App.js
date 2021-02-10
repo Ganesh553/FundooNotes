@@ -8,8 +8,9 @@ import {
   Link
 } from "react-router-dom";
 import Login from './components/login/login';
-import Register from './components/register/register';
+import Register from './components/register/register1';
 import Password from './components/forgotPwd/password';
+import reset from './components/reset/reset'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path='/register' component={Register} />
             <Route path='/password' component={Password} />
+            <Route path='/resetpassword/:token' component={reset} />
           </Switch>
       </Router>
     </div>
